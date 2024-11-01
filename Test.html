@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Tutoring Services</title>
+    <link rel="stylesheet" href="Test Css.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Chess Tutoring</div>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#fees">Fees</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="profile" class="section">
+        <h1>About Me</h1>
+        <p>Welcome! A decade year trained player that  Let’s make every move count!</p>
+        <div class="profile-info">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <div>
+                <h3>Why Choose Me?</h3>
+                <ul>
+                    <li>2400+ Lichess ELO</li>
+                    <li>Maintain A Long-Term Advantage</li>
+                    <li>Master Endgames</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section id="fees" class="section">
+        <h2>Fees</h2>
+        <table>
+            <tr>
+                <th>Session Type</th>
+                <th>Duration</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Group of 5 Students</td>
+                <td>1 Hour</td>
+                <td>RM30/Pax</td>
+            </tr>
+            <tr>
+                <td>Group of 3 Students</td>
+                <td>1 Hour</td>
+                <td>RM40/Pax</td>
+            </tr>
+            <tr>
+                <td>1 to 1 Private lesson</td>
+                <td>1 Hour</td>
+                <td>RM60</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Get in touch for more information or to schedule a session:</p>
+        <p>Email: <a href="mailto:ismeth.shanizul1@gmail.com">ismeth.shanizul1@gmail.com</a></p>
+        <p>Whatsapp: <a href="https://wa.link/duwdms" target="_blank">+60-139673688</a></p>
+    </section>
+<!-- FAQ Section -->
+<section id="faq" class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <button class="faq-question">What level of chess do you teach?</button>
+        <div class="faq-answer">
+            <p>I teach all levels, from complete beginners to advanced players looking to sharpen their skills.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">How are lessons conducted?</button>
+        <div class="faq-answer">
+            <p>Lessons can be conducted online via Google meet or in person if lived nearby</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">Do I need any prior experience?</button>
+        <div class="faq-answer">
+            <p>No prior experience is needed. I provide beginner lessons to introduce you to the basics of chess.</p>
+        </div>
+    </div>
+</div>
+<div class="faq-item">
+    <button class="faq-question">What language is it conducted in?</button>
+    <div class="faq-answer">
+        <p>only in English</p>
+    </div>
+</div>
+</div>
+<div class="faq-item">
+    <button class="faq-question">How can I get my schedule?</button>
+    <div class="faq-answer">
+        <p>After the purchase is made, Whatsapp/Email me the receipt and the following order respectively
+         <br></br>   - Name
+         <br></br>   - Elo (Chess rating)
+         <br></br>   - Package
+         <br></br>   - Age
+        </p>
+    </div>
+</div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Chess Tutoring Services</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqItems = document.querySelectorAll(".faq-item");
+    
+            faqItems.forEach(item => {
+                const questionButton = item.querySelector(".faq-question");
+    
+                questionButton.addEventListener("click", () => {
+                    const answer = item.querySelector(".faq-answer");
+                    const isOpen = answer.style.display === "block";
+    
+                    // Close all answers first
+                    document.querySelectorAll(".faq-answer").forEach(a => a.style.display = "none");
+    
+                    // Toggle the current answer
+                    answer.style.display = isOpen ? "none" : "block";
+                });
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqItems = document.querySelectorAll(".faq-item");
+    
+            faqItems.forEach(item => {
+                const questionButton = item.querySelector(".faq-question");
+    
+                questionButton.addEventListener("click", () => {
+                    // Toggle the 'open' class for the clicked item
+                    item.classList.toggle("open");
+    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) otherItem.classList.remove("open");
+                    });
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

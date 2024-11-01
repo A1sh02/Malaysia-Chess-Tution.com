@@ -1,0 +1,172 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header styling */
+header {
+    background-color: #000;
+    color: yellow;
+    padding: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: yellow;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+/* Section Styling */
+.section {
+    padding: 2em;
+    max-width: 800px;
+    margin: 2em auto;
+}
+
+/* Profile Section */
+.profile-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 1em;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid yellow;
+}
+
+/* Fees Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+table th, table td {
+    padding: 0.8em;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+table th {
+    background-color: yellow;
+    color: black;
+}
+
+table td {
+    background-color: #f8f8f8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #000;
+    color: yellow;
+    margin-top: 2em;
+}
+
+/* Decorative Shapes */
+.section::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    opacity: 0.3;
+}
+
+.section::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    top: -20px;
+    right: -20px;
+    opacity: 0.2;
+}
+/* FAQ Section Styling */
+#faq {
+    margin-top: 2em;
+}
+
+.faq-item {
+    margin-bottom: 1em;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: yellow;
+    color: black;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #ffd700;
+}
+
+.faq-answer {
+    padding: 1em;
+    display: none;
+    background-color: #f8f8f8;
+    border-top: 1px solid #333;
+    color: #333;
+}
+/* Adjusted FAQ Answer Styling for Animation */
+.faq-answer {
+    padding: 1em;
+    background-color: #f8f8f8;
+    border-top: 1px solid #333;
+    color: #333;
+    max-height: 0; /* Start collapsed */
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease; /* Smooth animation */
+}
+
+/* Opened FAQ Answer Style */
+.faq-item.open .faq-answer {
+    max-height: 200px; /* Adjust height as needed */
+    padding: 1em; /* Restore padding */
+}
